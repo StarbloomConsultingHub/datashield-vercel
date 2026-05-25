@@ -282,7 +282,7 @@
     // Production: posts to the live tunnel API endpoint
     // Dev/local: falls back to relative path
     const API_URL = 'https://datashieldnow.com/api/datashield/webhook/scan';
-    const WEBHOOK_SECRET = '';
+    const WEBHOOK_SECRET = ''; // Public landing page — no secret needed for free scans
 
     async function runScan() {
       const name = document.getElementById('demoName').value.trim();
