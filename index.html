@@ -279,10 +279,10 @@
   </div>
 
   <script>
-    // Vercel deployment: set DATASHIELD_API_URL env var in Vercel dashboard
-    // Locally: falls back to relative path
-    const API_URL = window.ENV_DATASHIELD_API_URL || '/api/datashield/webhook/scan';
-    const WEBHOOK_SECRET = window.ENV_DATASHIELD_WEBHOOK_SECRET || '';
+    // Production: posts to the live tunnel API endpoint
+    // Dev/local: falls back to relative path
+    const API_URL = 'https://datashieldnow.com/api/datashield/webhook/scan';
+    const WEBHOOK_SECRET = '';
 
     async function runScan() {
       const name = document.getElementById('demoName').value.trim();
